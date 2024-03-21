@@ -15,3 +15,4 @@ pnpm run dev
 ## Dependencies
 
 - [MediaPipe Tasks Vision](https://www.npmjs.com/package/@mediapipe/tasks-vision)
+- [react-webcam](https://www.npmjs.com/package/react-webcam)
