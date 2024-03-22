@@ -22,7 +22,6 @@ export default function useRecognizer() {
   const initializeRecognizer = async () => {
     // Early return if a Recognizer instance already exists or video element is not available
     if (!videoRef.current || recognizerRef.current) return;
-    console.log('Creating recognizer ...');
     const recognizer = await Recognizer.create({
       videoElement: videoRef.current,
     });
