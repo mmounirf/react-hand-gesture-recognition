@@ -13,10 +13,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-
-  on-code-quality-failure:
-    runs-on: ubuntu-latest
-
   build:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
