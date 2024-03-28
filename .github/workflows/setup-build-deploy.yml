@@ -1,8 +1,8 @@
-name: Setup, build and Deploy
+name: Setup, build and deploy
 
 on:
   workflow_run:
-    workflows: ["Code quality"]
+    workflows: ["Code quality check"]
     types: 
       - completed
 
