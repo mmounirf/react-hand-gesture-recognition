@@ -1,33 +1,36 @@
 {
-	"name": "react-hand-gesture-recognition",
-	"description": "Hand gesture recognition using React and MediaPipe framework",
-	"author": "Mohamed Mounir <mou@mmounir.dev> (https://mmounir.dev/)",
-	"private": true,
-	"license": "MIT",
-	"version": "0.1.0",
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "tsc && vite build",
-		"preview": "vite preview",
-		"check": "biome check .",
-		"fix": "biome check --apply ."
-	},
-	"dependencies": {
-		"@mediapipe/tasks-vision": "^0.10.12",
-		"framer-motion": "^11.0.22",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-webcam": "^7.2.0"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.6.3",
-		"@types/react": "^18.2.73",
-		"@types/react-dom": "^18.2.22",
-		"@typescript-eslint/eslint-plugin": "^7.4.0",
-		"@typescript-eslint/parser": "^7.4.0",
-		"@vitejs/plugin-react-swc": "^3.6.0",
-		"typescript": "^5.4.3",
-		"vite": "^5.2.6"
-	}
+  "name": "react-hand-gesture-recognition",
+  "description": "Hand gesture recognition using React and MediaPipe framework",
+  "author": "Mohamed Mounir <mou@mmounir.dev> (https://mmounir.dev/)",
+  "license": "MIT",
+  "version": "0.1.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmounirf/react-hand-gesture-recognition.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "check": "biome check .",
+    "fix": "biome check --apply ."
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^0.10.12",
+    "framer-motion": "^11.0.22",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-webcam": "^7.2.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.3",
+    "@types/react": "^18.2.73",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "@vitejs/plugin-react-swc": "^3.6.0",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.6"
+  }
 }
