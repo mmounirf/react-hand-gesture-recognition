@@ -1,4 +1,4 @@
-name: Build
+name: Setup, build and Deploy
 
 on:
   workflow_run:
@@ -17,12 +17,9 @@ jobs:
   on-code-quality-failure:
     runs-on: ubuntu-latest
 
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
-    steps:
-      - run: echo 'Code quality workflow failed, skipping build'
-
   build:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -60,6 +57,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
