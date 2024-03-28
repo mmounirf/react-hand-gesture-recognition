@@ -2,6 +2,7 @@
 	"name": "react-hand-gesture-recognition",
 	"description": "Hand gesture recognition using React and MediaPipe framework",
 	"author": "Mohamed Mounir <mou@mmounir.dev> (https://mmounir.dev/)",
+	"homepage": "https://mmounirf.github.io/react-hand-gesture-recognition/",
 	"license": "MIT",
 	"version": "0.1.0",
 	"type": "module",
