@@ -1,6 +1,6 @@
 export declare interface WasmFileset {
-  wasmLoaderPath: string;
-  wasmBinaryPath: string;
-  assetLoaderPath?: string;
-  assetBinaryPath?: string;
+	wasmLoaderPath: string;
+	wasmBinaryPath: string;
+	assetLoaderPath?: string;
+	assetBinaryPath?: string;
 }
