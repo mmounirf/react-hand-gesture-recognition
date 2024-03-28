@@ -90,6 +90,8 @@ main {
     video {
         position: relative;
         border-radius: 40px;
+        width: 400px;
+        height: 300px;
     }
 }
 

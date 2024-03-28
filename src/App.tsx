@@ -53,6 +53,7 @@ function App() {
 					}`}
 				>
 					<Webcam
+						videoConstraints={{ width: 400, height: 300, facingMode: "user" }}
 						width={400}
 						height={300}
 						ref={(webCamRef) => {

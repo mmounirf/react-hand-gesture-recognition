@@ -84,17 +84,19 @@ export default class Recognizer {
 	private async init(): Promise<void> {
 		this.recognizer = await GestureRecognizer.createFromOptions(this.vision, this.options);
 
-		const updateResults = async () => {
-			if (this.recognizer) {
-				this.results = await this.recognizer.recognizeForVideo(this.videoElement, Date.now());
-				if (this.resultsCallback) {
-					this.resultsCallback(this.results);
+		if (this.videoElement.duration) {
+			const updateResults = async () => {
+				if (this.recognizer) {
+					this.results = await this.recognizer.recognizeForVideo(this.videoElement, Date.now());
+					if (this.resultsCallback) {
+						this.resultsCallback(this.results);
+					}
 				}
-			}
-			requestAnimationFrame(updateResults);
-		};
+				requestAnimationFrame(updateResults);
+			};
 
-		updateResults();
+			updateResults();
+		}
 	}
 
 	/**
