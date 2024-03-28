@@ -21,13 +21,13 @@
 		"react-webcam": "^7.2.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.6.1",
-		"@types/react": "^18.2.66",
+		"@biomejs/biome": "^1.6.3",
+		"@types/react": "^18.2.73",
 		"@types/react-dom": "^18.2.22",
-		"@typescript-eslint/eslint-plugin": "^7.2.0",
-		"@typescript-eslint/parser": "^7.2.0",
-		"@vitejs/plugin-react-swc": "^3.5.0",
-		"typescript": "^5.2.2",
-		"vite": "^5.2.0"
+		"@typescript-eslint/eslint-plugin": "^7.4.0",
+		"@typescript-eslint/parser": "^7.4.0",
+		"@vitejs/plugin-react-swc": "^3.6.0",
+		"typescript": "^5.4.3",
+		"vite": "^5.2.6"
 	}
 }

@@ -72,8 +72,8 @@ function App() {
 				{error
 					? "🔴 Failed to initiate recgonizer. Check your browser console and network."
 					: recognizerRef.current === null
-					  ? "🟠 Initiating recgonizer ..."
-					  : "🟢 Recgonizer ready"}
+						? "🟠 Initiating recgonizer ..."
+						: "🟢 Recgonizer ready"}
 			</p>
 			<p>{emojiLabel === "None" ? "No gesture detected 🤷" : `${emojisMap[emojiLabel]} gesture detected`}</p>
 		</main>
