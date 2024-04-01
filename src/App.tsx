@@ -76,7 +76,9 @@ function App() {
 						? "🟠 Initiating recgonizer ..."
 						: "🟢 Recgonizer ready"}
 			</p>
-			<p>{emojiLabel === "None" ? "No gesture detected 🤷" : `${emojisMap[emojiLabel]} gesture detected`}</p>
+			{recognizerRef.current !== null && (
+				<p>{emojiLabel === "None" ? "No gesture detected 🤷" : `${emojisMap[emojiLabel]} gesture detected`}</p>
+			)}
 		</main>
 	);
 }

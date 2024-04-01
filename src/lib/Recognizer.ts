@@ -68,6 +68,8 @@ export default class Recognizer {
 		vision?: WasmFileset;
 		options?: GestureRecognizerOptions;
 	}): Promise<Recognizer> {
+		// TOOD - Track loading progress for wasm file and model file from defaultOptions.
+
 		/**
 		 * Manually create the WasmFileset instead of using the FilesetResolver.
 		 */
