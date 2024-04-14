@@ -3,7 +3,6 @@ import {
 	type GestureRecognizerOptions,
 	type GestureRecognizerResult,
 } from "@mediapipe/tasks-vision";
-import { defaultOptions } from "./constants";
 import type { WasmFileset } from "./types";
 
 /**
@@ -68,17 +67,29 @@ export default class Recognizer {
 		vision?: WasmFileset;
 		options?: GestureRecognizerOptions;
 	}): Promise<Recognizer> {
-		// TOOD - Track loading progress for wasm file and model file from defaultOptions.
-
 		/**
 		 * Manually create the WasmFileset instead of using the FilesetResolver.
 		 */
+		const modelAsset = await fetch(
+			"https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task",
+		);
 		const wasmLoader = await fetch(
 			"https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm/vision_wasm_internal.js",
 		);
 		const wasmBinary = await fetch(
 			"https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm/vision_wasm_internal.wasm",
 		);
+
+		const defaultOptions: GestureRecognizerOptions = {
+			runningMode: "VIDEO",
+			baseOptions: {
+				// Pretrained model for gesture recognition.
+				// https://developers.google.com/mediapipe/solutions/vision/gesture_recognizer#models
+				modelAssetBuffer: new Uint8Array(await modelAsset.arrayBuffer()),
+				delegate: "GPU",
+			},
+			numHands: 1,
+		};
 
 		const defaultWasmFileset: WasmFileset = {
 			wasmLoaderPath: URL.createObjectURL(await wasmLoader.blob()),

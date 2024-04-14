@@ -52,13 +52,13 @@ main {
 }
 
 .videoContainer.active {
-    &:after, &:before {
+    &::after, &::before {
         background: var(--active)
     }
 }
 
 .videoContainer.inactive {
-    &:after, &:before {
+    &::after, &::before {
         background: var(--inactive)
     }
 }
@@ -74,7 +74,7 @@ main {
     right: 0;
     margin: auto;
 
-    &&:after, &&:before {
+    &&::after, &&::before {
         content: "";
         position: absolute;
         top: -1px;
